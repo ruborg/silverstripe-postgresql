@@ -405,7 +405,7 @@ class PostgreSQLDatabase extends Database
 
         // Make column selection lists
         $pageClass = 'SilverStripe\\CMS\\Model\\SiteTree';
-        $fileClass = 'SilverStripe\\Assets\\File';
+        //$fileClass = 'SilverStripe\\Assets\\File';
         $select = array(
             $pageClass => array(
                 '"ClassName"',
@@ -419,18 +419,18 @@ class PostgreSQLDatabase extends Database
                 'NULL AS "Name"',
                 '"CanViewType"'
             ),
-            $fileClass => array(
-                '"ClassName"',
-                '"' . $tablesToSearch[$fileClass] . '"."ID"',
-                '0 AS "ParentID"',
-                '"Title"',
-                'NULL AS "URLSegment"',
-                'NULL AS "Content"',
-                '"LastEdited"',
-                '"Created"',
-                '"Name"',
-                'NULL AS "CanViewType"'
-            )
+//             $fileClass => array(
+//                 '"ClassName"',
+//                 '"' . $tablesToSearch[$fileClass] . '"."ID"',
+//                 '0 AS "ParentID"',
+//                 '"Title"',
+//                 'NULL AS "URLSegment"',
+//                 'NULL AS "Content"',
+//                 '"LastEdited"',
+//                 '"Created"',
+//                 '"Name"',
+//                 'NULL AS "CanViewType"'
+//             )
         );
 
         foreach ($searchableColumns as $searchableColumn) {
